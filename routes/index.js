@@ -13,6 +13,8 @@ router.get('/mutants/:role', function(req, res, next){
     {type: sequelize.QueryTypes.SELECT})
   .spread(function(data) {
     res.json(data);
+  }).catch(function(err) {
+    res.send(err);
   });
 });
 
