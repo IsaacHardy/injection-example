@@ -9,7 +9,7 @@ router.get('/', function(req, res) {
 
 router.get('/mutants/:role', function(req, res, next){
   models.sequelize.query(
-    "SELECT * FROM mutants WHERE role like ('%" + req.params.role + "%')",
+    "SELECT usename FROM mutants WHERE role like ('%" + req.params.role + "%')",
     {type: sequelize.QueryTypes.SELECT})
   .spread(function(data) {
     res.json(data);
