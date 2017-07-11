@@ -2,7 +2,7 @@
   "development": {
     "username": "IsaacHardy",
     "password": null,
-    "database": "",
+    "database": "injection-db",
     "host": "127.0.0.1",
     "dialect": "postgres"
   },
